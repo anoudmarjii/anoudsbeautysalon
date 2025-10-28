@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Dm Serif Display";
+    background-color: #FADADD;
+    height: 100vh;
+}
+
+.header {
+    background-color: #C4C4C7;
+    display: flex;
+    justify-content: space-between;
+    /*position items at the edges*/
+    align-items: center;
+    /*vertically align items */
+    padding: 10px;
+    height: 30px;
+}
+
+#name {
+    float: left;
+}
+
+#head ul li {
+    /* text-decoration: none; */
+    float: right;
+    padding-inline: 15px;
+    font-size: 14px;
+}
+
+#head a {
+    text-decoration: none;
+    color: black;
+}
+
+#signIn {
+    transition: all 0.3s ease;
+}
+
+#signIn:hover {
+    transform: scale(1.08);
+}
+
+#updateAppointments {
+    /* Make the container wider and centered */
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    color: #DE3163;
+}
+
+#updateAppointments form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* labels and inputs left-aligned */
+    max-width: 500px;
+    /* limit the form width */
+    margin: 0 auto;
+    /* center the form horizontally */
+}
+
+#updateAppointments form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    /* font-weight: 500; */
+}
+
+/* Inputs and selects: stretch to the form width */
+#updateAppointments form select,
+#updateAppointments form input[type="datetime-local"],
+#updateAppointments form input[type="text"],
+#updateAppointments form input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+    margin-bottom: 10px;
+}
+
+/* Radio container for SMS/Email */
+#radio {
+    display: flex;
+    gap: 20px;
+    /* space between the two radio options */
+    margin-bottom: 20px;
+}
+
+.updateBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* idk */
+}
+
+#updateBtn {
+    /* width: 80%; */
+    padding: 10px;
+    font-size: 18px;
+    font-family: "DM Serif Display";
+    color: white;
+    background-color: #DE3163;
+    border: none;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+#updateBtn:hover {
+    background-color: #DE3163;
+    transform: scale(1.05);
+}
+
+.Contact {
+    height: 115px;
+    background-color: #F88379;
+    width: 100%;
+    text-align: center;
+    /* margin-top: auto; */
+    color: black;
+
+}
+
+.Contact h3 {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.Contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contact ul li {
+    /* text-decoration: none; */
+    text-align: center;
+    /* float: inline-start; */
+    padding: 20px;
+    padding-bottom: 13px;
+    font-size: 25px;
+    /* color: black; */
+}
+
+.Contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.Contact p {
+    font-size: 10px;
+    opacity: 80%;
+}
+
+.hdn {
+    display: none;
+}
+
+.hdn {
+    text-decoration: none;
+    color: #DE3163;
+    display: none;
+}
+
+#backarrow {
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+#backarrow a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+/* mobile devices & tablets*/
+@media screen and (min-width: 320px) and (max-width: 480px),
+(min-width: 481px) and (max-width:768px) {
+    body {
+        font-size: 15px;
+        height: 100%;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .hdn {
+        display: block;
+    }
+
+    .hdn a {
+        text-decoration: none;
+        color: #DE3163;
+        font-size: 35px;
+        margin-left: 145px;
+        margin-top: 50px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    #updateAppointments {
+        width: 100%;
+        /* Full width */
+        padding: 20px;
+        /* Add padding for inner spacing */
+        border-radius: 0;
+        /* Remove rounded corners for a cleaner, full-width look */
+        box-shadow: none;
+        /* Optional: remove shadow for simplicity */
+    }
+
+    #updateAppointments form {
+        width: 100%;
+        /* Form takes full width */
+        padding: 0;
+        /* Adjust padding if needed */
+    }
+
+    #updateAppointments form input,
+    #updateAppointments form select,
+    #updateAppointments form textarea {
+        width: 100%;
+        /* Inputs and selects take full width */
+        box-sizing: border-box;
+        /* Include padding and border in width */
+        margin-bottom: 10px;
+        /* Add spacing between fields */
+    }
+
+    #updateAppointments h1 {
+        font-size: 22px;
+        /* Adjust heading size for smaller screens */
+        text-align: center;
+        /* Center align heading */
+        margin-bottom: 20px;
+        /* Add spacing below heading */
+    }
+
+    .updateBtn {
+        display: flex;
+        justify-content: center;
+        /* Center the button */
+        width: 100%;
+        /* Ensure button area takes full width */
+    }
+
+    #updateBtn {
+        width: 90%;
+        /* Make the button responsive and nearly full-width */
+    }
+
+    .Contact {
+        width: 100%;
+    }
+}

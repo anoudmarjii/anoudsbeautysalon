@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "DM Serif Display", serif;
+    background-color: #FADADD;
+}
+
+#SignUpPage {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 15%;
+    height: 100vh;
+    grid-template-areas:
+        "SignUpSignInPart SignUpPagePart"
+        "Contact Contact";
+}
+
+#SignUpPagePart {
+    grid-area: SignUpPagePart;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 40px;
+}
+
+#SignUpPagePart h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #DE3163;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-top: 15px;
+    color: #333;
+    font-size: 16px;
+}
+
+form input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="checkbox"] {
+    width: auto;
+    margin: 15px 4px 5px 0;
+    align-self: flex-start;
+}
+
+form button {
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #DE3163;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #F88379;
+    transform: scale(1.05);
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 80%;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin: 0;
+    /* Remove any space around checkbox */
+    margin-right: 8px;
+}
+
+.checkbox-container label {
+    margin: 0;
+    /* Remove any space around the label */
+}
+
+#password-error {
+    color: #DC143C;
+    display: none;
+    /* hidden by default */
+    margin-top: 15px;
+}
+
+#SignUpSignInPart {
+    grid-area: SignUpSignInPart;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #DE3163;
+    padding: 10%;
+    color: white;
+}
+
+#SignUpSignInPart h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#SignUpSignInPart p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#SignUpSignInPart h6 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    /* font-weight: bold; */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#SignUpSignInPart button {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: #DE3163;
+    background-color: #FADADD;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#SignUpSignInPart button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+#home {
+    position: absolute;
+    /* Make the element positionable relative to its nearest positioned ancestor */
+    top: 10px;
+    /* Adjust the distance from the top */
+    left: 15px;
+    /* Adjust the distance from the left */
+    font-size: 20px;
+    margin: 0;
+    /* Remove default margin if necessary */
+}
+
+#home a {
+    text-decoration: none;
+    color: white;
+}
+
+.Contact {
+    grid-area: Contact;
+    background-color: #F88379;
+    text-align: center;
+    padding: 20px 0px;
+    color: white;
+    width: 100%;
+    /*i added this*/
+}
+
+.Contact h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.Contact ul {
+    display: flex;
+    justify-content: center;
+    /* padding: 0; */
+    /* list-style: none; */
+    margin: 10px 0;
+}
+
+.Contact ul li {
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.Contact ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.Contact p {
+    font-size: 10px;
+    opacity: 0.8;
+    /* = 80% */
+}
+
+.hiddenBtn {
+    display: none;
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #DE3163;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hiddenBtn:hover {
+    background-color: #DE3163;
+    transform: scale(1.05);
+}
+
+#homehidden{
+    position: absolute;
+    /* Make the element positionable relative to its nearest positioned ancestor */
+    top: 10px;
+    /* Adjust the distance from the top */
+    left: 15px;
+    /* Adjust the distance from the left */
+    font-size: 30px;
+    margin: 0;
+    /* Remove default margin if necessary */
+    display: none;
+}
+
+#homehidden a {
+    text-decoration: none;
+    color: #DE3163;
+}
+
+
+
+/* Phones, Ipads, Tablets */
+@media screen and (min-width: 320px) and (max-width: 480px), screen and (min-width: 481px) and (max-width: 768px) {
+
+    /* Hide the sign in part (left panel) */
+    #SignUpSignInPart {
+        display: none;
+    }
+
+    /* Make the main container a single-column flex layout */
+    #SignUpPage {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* or center */
+        align-items: center;
+        height: auto;
+        /* let the container height expand */
+        margin: 0;
+    }
+
+    /* Adjust the sign up form styling */
+    #SignUpPagePart {
+        margin: 20px;
+        width: 90%;
+        max-width: 600px;
+        /* or any suitable max-width for tablet */
+    }
+
+    /* Reveal the hidden "Sign In" button */
+    .hiddenBtn {
+        display: block;
+    }
+
+    #homehidden{
+        display: block;
+    }
+}

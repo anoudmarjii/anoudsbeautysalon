@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Dm Serif Display";
+    background-color: #FADADD;
+    /* overflow: hidden; */
+}
+
+.header {
+    background-color: #C4C4C7;
+    display: flex;
+    justify-content: space-between;
+    /*position items at the edges*/
+    align-items: center;
+    /*vertically align items */
+    padding: 10px;
+    height: 30px;
+    /* width: 100%; */
+    /* position: sticky;
+    top: 0;
+    z-index: 9999; */
+}
+
+#name {
+    float: left;
+}
+
+#head ul li {
+    /* text-decoration: none; */
+    float: right;
+    padding-inline: 15px;
+    font-size: 14px;
+}
+
+#head a {
+    text-decoration: none;
+    color: black;
+}
+
+#signIn {
+    transition: all 0.3s ease;
+}
+
+#signIn:hover {
+    transform: scale(1.08);
+}
+
+
+#submissionForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*to align the flex items when they do not use all available space on the main-axis (horizontally).*/
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 40px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    /* margin-bottom: 20px;
+    padding-left: 30px; */
+    padding: 20px;
+    padding-bottom: 0px;
+    color: #DE3163;
+}
+
+form input,
+select {
+    /*to make the text fields on everything inside the form*/
+    width: 30%;
+    /*To ensure it is adaptable with different inputs and screensizes*/
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#radio div:first-child {
+    margin-right: 50px !important;
+}
+
+h6 {
+    font-family: "Roboto Serif", serif;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+form input[type="radio"] {
+    accent-color: #DE3163;
+    /* Change the color of the radio button (modern browsers) */
+    border: none;
+    box-shadow: none;
+    width: 20px;
+}
+
+#smslabel,
+#emaillabel {
+    font-family: "Roboto Serif", serif;
+    font-size: 15px;
+}
+
+button {
+    width: 20%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #DE3163;
+    border: none;
+    border-radius: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #DE3163;
+    transform: scale(1.05);
+}
+
+.Contact {
+    height: 115px;
+    background-color: #F88379;
+    width: 100%;
+    text-align: center;
+    /* margin-top: auto; */
+
+}
+
+.Contact h3 {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.Contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contact ul li {
+    /* text-decoration: none; */
+    text-align: center;
+    /* float: inline-start; */
+    padding: 20px;
+    padding-bottom: 13px;
+    font-size: 25px;
+    /* color: black; */
+}
+
+.Contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.Contact p {
+    font-size: 10px;
+    opacity: 80%;
+}
+
+#hambNav {
+    display: none;
+}
+
+/* mobile devices */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    form input,
+    select {
+        padding: 5px;
+        width: auto;
+    }
+
+    button {
+        margin: 5px auto;
+        padding: 5px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    #hambNav {
+        display: block;
+        position: absolute;  /* Position it absolutely */
+        right: 10px;         /* Move it left from the right edge */
+        z-index: 9999;       /* Ensure it stays on top */
+}
+
+    #hambNav h1 {
+        cursor: pointer;
+        /* Add a pointer cursor to indicate it's clickable */
+        font-size: 35px;
+        margin-left: 10px;
+    }
+
+    #hambNav .dropdown-content {
+        display: none;
+        /* Hide the dropdown initially */
+        position: absolute;
+        background-color:#C4C4C7;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+        right: 0;
+        /* Align the dropdown to the right */
+    }
+
+    #hambNav:hover .dropdown-content {
+        display: block;
+        /* Show the dropdown on hover */
+    }
+
+    #hambNav a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+
+/* iPads and tablets */
+@media screen and (min-width: 481px) and (max-width:768px){
+    body {
+        font-size: 15px;
+    }
+
+    form input,
+    select {
+        padding: 5px;
+        width: auto;
+    }
+
+    button {
+        margin: 5px auto;
+        padding: 5px;
+    }
+}

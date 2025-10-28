@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Dm Serif Display";
+    background-color: #FADADD;
+    height: 100vh;
+}
+
+.header {
+    background-color: #C4C4C7;
+    display: flex;
+    justify-content: space-between;
+    /*position items at the edges*/
+    align-items: center;
+    /*vertically align items */
+    padding: 10px;
+    height: 50px;
+}
+
+#name {
+    float: left;
+}
+
+#head ul li {
+    /* text-decoration: none; */
+    float: right;
+    padding-inline: 15px;
+    font-size: 14px;
+}
+
+#head a {
+    text-decoration: none;
+    color: black;
+}
+
+#signIn {
+    transition: all 0.3s ease;
+}
+
+#signIn:hover {
+    transform: scale(1.08);
+}
+
+#UserDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*to align the flex items when they do not use all available space on the main-axis (horizontally).*/
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 40px;
+    align-items: center;
+    /*to center the details*/
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    color: #DE3163;
+}
+
+#UserDetails h3 {
+    width: 30%;
+    /*To ensure it is adaptable with different inputs and screensizes*/
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#UserDetails h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#appointments {
+    margin-bottom: 25px;
+}
+
+.logoutBtn {
+    display: flex;
+    /* Enables Flexbox */
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+}
+
+#Logout {
+    /* width: 80%; */
+    padding: 10px;
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: white;
+    background-color: #DE3163;
+    border: none;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+#Logout:hover {
+    background-color: #DE3163;
+    transform: scale(1.05);
+}
+
+
+.Contact {
+    height: 115px;
+    background-color: #F88379;
+    width: 100%;
+    text-align: center;
+    /* margin-top: auto; */
+    color: black;
+
+}
+
+.Contact h3 {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.Contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contact ul li {
+    /* text-decoration: none; */
+    text-align: center;
+    /* float: inline-start; */
+    padding: 20px;
+    padding-bottom: 13px;
+    font-size: 25px;
+    /* color: black; */
+}
+
+.Contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.Contact p {
+    font-size: 10px;
+    opacity: 80%;
+}
+
+.hdn {
+    display: none;
+}
+
+
+/* mobile devices & tablets*/
+@media screen and (min-width: 320px) and (max-width: 480px),
+(min-width: 481px) and (max-width:768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .hdn {
+        display: block;
+    }
+
+    .hdn a {
+        text-decoration: none;
+        color: #DE3163;
+        font-size: 35px;
+        margin: 30px;
+        text-align: left;
+    }
+
+    #UserDetails h3 {
+        width: 100%;
+        /* Fields take full width */
+        padding: 10px;
+        /* Inner padding for fields */
+        font-size: 14px;
+        /* Adjust font size for smaller screens */
+        margin: 10px 0;
+        /* Add vertical spacing between fields */
+        text-align: center;
+    }
+
+    h1,
+    h2 {
+        font-size: 18px;
+        /* Adjust heading sizes for smaller screens */
+        text-align: center;
+        /* Center-align text */
+    }
+}

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Dm Serif Display";
+    background-color: #FADADD;
+}
+
+#SignUpPage {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 15% auto;
+    height: 100vh;
+    grid-template-areas:
+        "SignUpSignInPart SignUpPagePart "
+        "Contact Contact";
+}
+
+#SignUpPagePart{
+    grid-area: SignUpPagePart;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+} 
+
+#SignUpPage H1 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#fullName, #email, #DoB, #password , #confirmPassword {
+    width: 80%;
+    /*To ensure it is adaptable with different inputs and screensizes*/
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#SignUpPagePart h5 {
+    font-size: small;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#SignUpPagePart h5:hover {
+    cursor: pointer;
+    color: darkslategrey;
+    transform: scale(1.05);
+    text-shadow: white;
+}
+
+#submitSignUpButton {
+    width: 80%;
+    cursor: pointer;
+    /* padding: 5px; */
+    border-radius: 20px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    text-align: center;
+    background-color: #F88379;
+    margin-left: 15px;
+}
+
+#submitSignUpButton:hover {
+    background-color: #DE3163;
+    transform: scale(1.05);
+}
+
+#SignUpSignInPart {
+    grid-area: SignInSignUpPart;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /*this what makes the difference*/
+    background-color: #DE3163;
+    padding: 10%;
+}
+
+#SignUpSignInPart h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#SignUpSignInPart p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#SignUpSignInPart h6 {
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#SignUpSignInPart button {
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+#SignUpSignInPart button:hover {
+    background-color: #FADADD;
+    transform: scale(1.05);
+}
+
+.Contact {
+    grid-area: Contact;
+    /* height: 100vh; */
+    background-color: #F88379;
+    width: 100%;
+    text-align: center;
+    /* margin-top: auto; */
+}
+
+.Contact h3 {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.Contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contact ul li {
+    /* text-decoration: none; */
+    text-align: center;
+    /* float: inline-start; */
+    padding: 15px;
+    padding-bottom: 8px;
+    font-size: 20px;
+    /* color: black; */
+}
+
+.Contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.Contact p {
+    font-size: 10px;
+    opacity: 80%;
+}

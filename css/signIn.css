@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Dm Serif Display";
+    background-color: #FADADD;
+    /* overflow: hidden; */
+}
+
+#SignInPage {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 15%;
+    height: 100vh;
+    grid-template-areas:
+        "SignInPagePart SignInSignUpPart"
+        "Contact Contact";
+}
+
+/* #SignInPage {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 2fr 1fr;
+} */
+
+#SignInPagePart {
+    grid-area: SignInPagePart;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* this and down to make the box*/
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 40px;
+}
+
+#SignInPage H1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #DE3163;
+}
+
+/* #email, #password {
+    width: 80%;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+form input {
+    /*to make the text fields on everything inside the form*/
+    width: 80%;
+    /*To ensure it is adaptable with different inputs and screensizes*/
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#SignInPagePart h5 {
+    font-size: small;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#SignInPagePart h5:hover {
+    cursor: pointer;
+    color: darkslategrey;
+    transform: scale(1.05);
+    text-shadow: white;
+}
+
+#submitSignInButton {
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #DE3163;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submitSignInButton:hover {
+    background-color: #DE3163;
+    transform: scale(1.05);
+}
+
+#SignInSignUpPart {
+    grid-area: SignInSignUpPart;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #DE3163;
+    padding: 10%;
+    color: white;
+}
+
+/* home button*/
+#SignInPagePart h2 {
+    position: absolute;
+    /* Make the element positionable relative to its nearest positioned ancestor */
+    top: 10px;
+    /* Adjust the distance from the top */
+    left: 15px;
+    /* Adjust the distance from the left */
+    font-size: 25px;
+    margin: 0;
+    /* Remove default margin if necessary */
+}
+
+#SignInPagePart h2 a {
+    text-decoration: none;
+    color: black;
+}
+
+#SignInSignUpPart {
+    grid-area: SignInSignUpPart;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /*this what makes the difference*/
+    background-color: #DE3163;
+    padding: 10%;
+    color: white;
+}
+
+#SignInSignUpPart h2 {
+    font-size: 35px;
+    /* text-align: center; */
+    margin-bottom: 20px;
+}
+
+#SignInSignUpPart p {
+    font-size: 18px;
+    /* text-align: center; */
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#SignInSignUpPart h6 {
+    font-size: 14px;
+    /* font-weight: bold; */
+    /* text-align: center; */
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#SignInSignUpPart button {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: #DE3163;
+    background-color: #FADADD;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#SignInSignUpPart button:hover {
+    background-color: #FADADD;
+    transform: scale(1.05);
+}
+
+.Contact {
+    grid-area: Contact;
+    background-color: #F88379;
+    text-align: center;
+    padding: 20px 0px;
+    color: white;
+    width: 100%;
+    /*i added this*/
+}
+
+.Contact h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.Contact ul {
+    display: flex;
+    justify-content: center;
+    /* padding: 0; */
+    /* list-style: none; */
+    margin: 10px 0;
+}
+
+.Contact ul li {
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.Contact ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.Contact p {
+    font-size: 10px;
+    opacity: 0.8;
+    /* = 80% */
+}
+
+.hiddenBtn {
+    display: none;
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #DE3163;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hiddenBtn:hover {
+    background-color: #DE3163;
+    transform: scale(1.05);
+}
+
+
+/* Phones, Ipads, Tablets */
+@media screen and (min-width: 320px) and (max-width: 480px), screen and (min-width: 481px) and (max-width: 768px) {
+
+    /* Hide the 'Sign Up' section on mobile */
+    #SignInSignUpPart {
+        display: none;
+    }
+
+    /* Make the main container a single-column layout */
+    #SignInPage {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* Centers vertically */
+        align-items: center;
+        /* Centers horizontally */
+        height: auto;
+        /* let the container height expand */
+        margin: 0;
+        /* Remove default margins if needed */
+    }
+
+    #SignInPagePart {
+        margin: 20px;
+        width: 90%;
+        max-width: 600px;
+      }
+
+    /* Reveal the Sign Up button that was hidden for desktop */
+    .hiddenBtn {
+        display: block;
+    }
+}

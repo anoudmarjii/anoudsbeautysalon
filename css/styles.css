@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Dm Serif Display";
+    background-color: #FADADD;
+    height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.header {
+    background-color: #C4C4C7;
+    display: flex;
+    justify-content: space-between;
+    /*position items at the edges*/
+    align-items: center;
+    /*vertically align items */
+    padding: 10px;
+    /* position: sticky;
+    top: 0; */
+    height: 30px;
+    /* width: 100%; */
+    /* z-index: 10; ensure the header stays on top */
+}
+
+.sale {
+    background-color: #DE3163;
+    /* width: 100%; */
+    text-align: center;
+    color: #f5f5f5;
+    padding: 10px;
+    margin-top: 0%;
+}
+
+#name {
+    float: left;
+}
+
+#head ul li {
+    /* text-decoration: none; */
+    float: right;
+    padding-inline: 15px;
+    font-size: 14px;
+}
+
+#head a {
+    text-decoration: none;
+    color: black;
+}
+
+#signIn {
+    transition: all 0.3s ease;
+}
+
+#signIn:hover {
+    transform: scale(1.08);
+}
+
+#imagepart {
+    /* background-color: pink; change to image background */
+    position: relative;
+    /* background-image: url(../assets/website\ image\ background.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* width: 100%; */
+    height: 350px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 5px;
+}
+
+#imagepart::before {
+    /* pseudo-element to make a seperate layer for the background*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background-image: url(../assets/website\ image\ background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    /* Adjust the opacity of the background */
+    z-index: -1;
+    /* Place the pseudo-element behind the content */
+}
+
+#button1 {
+    align-items: center;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Dm Serif Display";
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /*add shadow*/
+    transition: all 0.3s ease;
+    /*transition for smooth effect*/
+}
+
+#button1:hover {
+    background-color: #DE3163;
+    transform: scale(1.05);
+    /*slightly enlarge the button*/
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    /* Distributes space evenly between the boxes */
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.info {
+    /* background-color: #f5f5f5; */
+    /* margin: 5px; space between boxes */
+    padding: 20px;
+    width: 45%;
+}
+
+.info h4 {
+    color: black;
+    margin-bottom: 10px;
+    /* border-bottom: 2px solid black; */
+}
+
+#Services {
+    /* width: 100%; */
+    height: 250px;
+    /* margin-top: 5px; */
+    padding: 20px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-evenly;
+    align-items: center; */
+}
+
+#Services h3 {
+    font-size: 20px;
+    /* float: left;
+    float: inline-start; */
+    text-align: left;
+    /* padding-left: 10px; */
+    margin-bottom: 10px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-evenly;
+    /* justify-content: space-between; */
+    /* align-items: center;
+    gap: 20px; */
+}
+
+.servicesboxes {
+    /* background-color: 	#F88379; */
+    background-color: #FF8096;
+    text-align: center;
+    /* display: flex; */
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 150px;
+    width: 20%;
+    /* gap: 5px; */
+    display: flex;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px;
+    /*add shadow*/
+    transition: all 0.3s ease;
+    /*transition for smooth effect*/
+}
+
+.servicesboxes:hover {
+    background-color: #DE3163;
+    transform: scale(1.05);
+    /*slightly enlarge the button*/
+}
+
+#About {
+    /* background-color: #F88379; */
+    background-color: #DE3163;
+    border: 1px solid black;
+    /* Add a solid black border*/
+    height: 200px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#About h3 {
+    size: 20px;
+    padding-bottom: 15px;
+}
+
+#About p {
+    align-items: center;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#Gifts {
+    /* width: 100%; */
+    height: 200px;
+    padding: 20px;
+}
+
+#Gifts h3 {
+    font-size: 20px;
+    text-align: left;
+}
+
+.gifts-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+.giftsboxes {
+    background-color: #FF8096;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid black;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px;
+    /*add shadow*/
+    transition: all 0.3s ease;
+    /*transition for smooth effect*/
+}
+
+.giftsboxes:hover {
+    background-color: #DE3163;
+    transform: scale(1.05);
+    /*slightly enlarge the button*/
+}
+
+.Contact {
+    height: 115px;
+    background-color: #F88379;
+    width: 100%;
+    text-align: center;
+    /* margin-top: auto; */
+
+}
+
+.Contact h3 {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.Contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contact ul li {
+    /* text-decoration: none; */
+    text-align: center;
+    /* float: inline-start; */
+    padding: 20px;
+    padding-bottom: 13px;
+    font-size: 25px;
+    /* color: black; */
+}
+
+.Contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.Contact p {
+    font-size: 10px;
+    opacity: 80%;
+}
+
+#hambNav {
+    display: none;
+}
+
+/* mobile devices */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    #hambNav {
+        display: block;
+        position: absolute;
+        /* Position it absolutely */
+        top: 10px;
+        /* Move it down from top */
+        right: 10px;
+        /* Move it left from the right edge */
+        z-index: 9999;
+        /* Ensure it stays on top */
+    }
+
+    #hambNav h1 {
+        cursor: pointer;
+        /* Add a pointer cursor to indicate it's clickable */
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #hambNav .dropdown-content {
+        display: none;
+        /* Hide the dropdown initially */
+        position: absolute;
+        background-color: #C4C4C7;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+        right: 0;
+        /* Align the dropdown to the right */
+    }
+
+    #hambNav:hover .dropdown-content {
+        display: block;
+        /* Show the dropdown on hover */
+    }
+
+    #hambNav a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #button1 {
+        width: 120px;
+        /* Make width smaller */
+        height: 40px;
+        /* Make height smaller */
+        font-size: 12px;
+        /* Reduce font size */
+        border-radius: 20px;
+        /* Slightly smaller corner radius */
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info h4 {
+        font-weight: bold;
+    }
+
+    #Services {
+        height: auto;
+    }
+
+    .services-container {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .servicesboxes {
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        height: 60px;
+        width: 60%;
+        border-radius: 20px;
+    }
+
+    #About {
+        height: auto;
+        text-align: center;
+        padding-top: 10px;
+        margin-top: 5px;
+    }
+
+    #Gifts {
+        height: auto;
+    }
+
+    .gifts-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .giftsboxes {
+        display: flex;
+        /* Make the box a flex container */
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        padding: 5px;
+        margin-top: 10px;
+        height: 60px;
+        width: 60%;
+    }
+}
+
+
+/* iPads and tablets */
+@media screen and (min-width: 481px) and (max-width:768px){
+    body {
+        font-size: 15px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    #hambNav {
+        display: block;
+        position: absolute;
+        /* Position it absolutely */
+        top: 10px;
+        /* Move it down from top */
+        right: 10px;
+        /* Move it left from the right edge */
+        z-index: 9999;
+        /* Ensure it stays on top */
+    }
+
+    #hambNav h1 {
+        cursor: pointer;
+        /* Add a pointer cursor to indicate it's clickable */
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #hambNav .dropdown-content {
+        display: none;
+        /* Hide the dropdown initially */
+        position: absolute;
+        background-color: #C4C4C7;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+        right: 0;
+        /* Align the dropdown to the right */
+    }
+
+    #hambNav:hover .dropdown-content {
+        display: block;
+        /* Show the dropdown on hover */
+    }
+
+    #hambNav a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #button1 {
+        width: 150px;
+        /* Make width smaller */
+        height: 50px;
+        /* Make height smaller */
+        font-size: 13px;
+        /* Reduce font size */
+        border-radius: 23px;
+        /* Slightly smaller corner radius */
+    }
+
+    .info-container {
+        display: flex;
+        justify-content: space-between;
+        /* Distributes space evenly between the boxes */
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    
+    .info {
+        padding: 20px;
+        width: 45%;
+    }
+
+    #Services {
+        height: auto;
+    }
+
+    .services-container {
+        flex-wrap: wrap;
+        height: auto;
+        align-items: center;
+    }
+
+    .servicesboxes {
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        height: 60px;
+        width: 45%;
+        border-radius: 20px;
+    }
+
+    #About {
+        height: auto;
+        text-align: center;
+        padding-top: 10px;
+        margin-top: 5px;
+    }
+
+    #Gifts {
+        height: auto;
+    }
+
+    .gifts-container {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        align-items: center;
+    }
+
+    .giftsboxes {
+        display: flex;
+        /* Make the box a flex container */
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        padding: 5px;
+        margin-top: 10px;
+        height: 60px;
+        width: 45%;
+    }
+}
